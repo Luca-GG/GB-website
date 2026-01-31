@@ -1,0 +1,474 @@
+/* =============================================
+  GADEA & BUSCH YACHT DESIGN - Estilos
+  =============================================
+
+  CÓMO CAMBIAR COLORES:
+  - --navy-deep: Azul marino principal del fondo oscuro (#030621)
+  - --sky-accent: Azul cielo para acentos y highlights
+
+  IMÁGENES A REEMPLAZAR:
+  - logoazul.png: Logo del hero
+  - founders.png: Imagen de fundadores
+  - logoblanco.png: Logo blanco en secciones claras
+  - yacht.png: Imagen del yacht (ancho completo)
+  - fondoservices.png: Fondo de la lista de servicios
+  - logofalopa.png: Logo del footer
+
+  =============================================
+*/
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+/* ========== VARIABLES DE COLOR ========== */
+:root {
+  --navy-deep: #030621;
+  --navy-medium: #010f4c;
+  --navy-light: #0049ff;
+
+  --sky-accent: #3b9fd8;
+  --sky-light: #6ba3d6;
+
+  --white: #ffffff;
+  --gray-light: #f8f8f8;
+  --gray-text: #7a8fa8;
+
+  --electric-blue: #1d59ff;
+}
+
+/* ========== RESET Y BASE ========== */
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  user-select: none;
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  margin: 0;
+  color: var(--navy-medium);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ========== UTILIDADES ========== */
+
+/* Animación de revelado */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== fin utilidades ==========*/
+
+/* ========== Header ========== */
+.hero-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--navy-medium);
+  color: var(--white);
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.hero-logo-img {
+  width: 80% !important;
+}
+
+.scroll-indicator {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  max-width: 900px;
+  margin: 0 auto;
+  bottom: 3rem;
+  color: var(--gray-text);
+  animation: bounce 2s infinite;
+  transition: color 0.3s;
+}
+.scroll-indicator svg {
+  width: 40px;
+  height: 40px;
+}
+
+.scroll-indicator:hover {
+  color: var(--sky-accent);
+}
+
+.scroll-indicator .svg-mobile {
+  display: none;
+}
+
+/* ========== Fin Header ========== */
+/* ========== Seccion about us ========== */
+.about-section {
+  height: 100%;
+  background: var(--gray-light);
+  color: var(--navy-deep);
+}
+
+.aboutUs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 75px 0 25px 50px;
+}
+
+.aboutUs h2 {
+  font-size: 30px;
+  font-weight: 400 !important;
+  margin: 0;
+}
+
+.aboutUsLinea {
+  height: 1px;
+  width: 100px;
+  background-color: #010f4c;
+}
+
+.aboutUsLinea:first-child {
+  width: 150px;
+}
+
+.aboutUs-foundersImage {
+  position: relative;
+  width: 100%;
+}
+
+.aboutUs-foundersImage img {
+  margin: 0 !important;
+  width: calc(100% - 30px);
+  border-left: 15px solid #ffff;
+  border-right: 15px solid #ffff;
+}
+
+.aboutUs-foundersImage-top,
+.aboutUs-foundersImage-bottom {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 15px;
+  background: #010f4c;
+}
+
+.aboutUs-foundersImage-bottom {
+  top: initial;
+  bottom: 0;
+  background-color: #3b9fd8;
+}
+
+.aboutUs-foundersNames {
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  gap: 30rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.aboutUs-foundersNames h3 {
+  font-size: clamp(3rem, 3vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* ========== Fin Seccion about us ========== */
+/* ========== Inicio Seccion info ========== */
+.info {
+  padding-bottom: 5vh;
+}
+.info-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 220px;
+}
+
+.info-lista-item {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  line-height: 1.5;
+}
+.info-lista-item span {
+  align-self: flex-end;
+  position: relative;
+}
+.info-lista-resaltado,
+.info-lista-ultimo-resaltado {
+  color: var(--electric-blue);
+  font-size: 1.75em;
+  margin: 0 5px;
+  line-height: 1;
+}
+.info-lista-resaltado {
+  position: relative;
+  bottom: 3.5px;
+}
+.info-lista-ultimo-resaltado {
+  font-size: 30px;
+}
+.info-lista-viñeta {
+  width: 30px;
+  height: 3px;
+  background: var(--electric-blue);
+  margin-top: 4px;
+
+  margin-right: 15px;
+}
+
+.info-lista-accent {
+  color: var(--sky-accent);
+  font-weight: 600;
+}
+
+/* ========== Fin Seccion info ========== */
+/* ========== Inicio Seccion Services ========== */
+.services-section {
+  min-height: 100vh;
+  padding: 4rem 0 0;
+}
+.yacht-fullwidth {
+  width: 100%;
+}
+.yacht-fullwidth img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.services-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+  z-index: 0;
+}
+.services-lista {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+.services-lista-items {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  list-style: none;
+  gap: 5px;
+}
+.services-lista-items li {
+  list-style: none;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 500;
+}
+.service-item-separador {
+  margin: 0 auto;
+  width: 32px;
+  height: 2px;
+  background: var(--sky-accent);
+}
+.service-item {
+  position: relative;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+/* ========== Fin  Seccion Services ========== */
+/* ==========  Inicio contact sesion ========== */
+.contact-section {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  background: var(--navy-deep);
+  color: var(--white);
+}
+
+.logo-silueta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  opacity: 0.5;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 1;
+  top: 25px;
+  text-align: center;
+}
+
+.contact-website {
+  display: block;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: var(--gray-text);
+  margin-bottom: 4rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--gray-text);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  transition: color 0.3s;
+}
+
+.contact-link:hover {
+  color: var(--sky-accent);
+}
+
+.contact-link svg {
+  transition: transform 0.3s;
+}
+
+.contact-link:hover svg {
+  transform: scale(1.1);
+}
+
+.copyright {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+.contact-website {
+  margin-bottom: 3rem;
+  letter-spacing: 0.1em;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .hero-section {
+    justify-content: center;
+    align-items: center;
+    padding-top: 0 !important;
+  }
+  .section-header {
+    margin-bottom: 2rem;
+  }
+  .scroll-indicator .svg-desktop {
+    display: none;
+  }
+  .scroll-indicator .svg-mobile {
+    display: initial;
+  }
+  .section-header .line {
+    max-width: 3rem;
+  }
+
+  .section-header .line-long {
+    max-width: 6rem;
+  }
+
+  .founders-names {
+    gap: 1.5rem;
+  }
+
+  .contact-website {
+    margin-bottom: 3rem;
+    letter-spacing: 0.1em;
+  }
+
+  .section-logo .logo-img {
+    width: 100px;
+    height: auto;
+  }
+
+  .logo-footer-img {
+    width: 80px;
+  }
+}
+@media (min-width: 640px) {
+  .contact-links {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+@media (max-width: 480px) {
+  .stat-item {
+    flex-direction: column;
+    height: 4px;
+  }
+
+  .stat-item::before {
+    width: 24px;
+    height: 4px;
+  }
+
+  .founders-names {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
