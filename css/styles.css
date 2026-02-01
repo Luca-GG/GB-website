@@ -23,14 +23,16 @@
   --navy-medium: #010f4c;
   --navy-light: #0049ff;
 
-  --sky-accent: #3b9fd8;
   --sky-light: #6ba3d6;
 
-  --white: #ffffff;
-  --gray-light: #f8f8f8;
-  --gray-text: #7a8fa8;
 
+  --gray-light: #f8f8f8;
+  --sky-accent: #3b9fd8;
+  --white: #ffffff;
+  --gray-text: #7a8fa8;
   --electric-blue: #1d59ff;
+  --blue-logo: #000f4c;
+  --dark-blue: #030621;
 }
 
 /* ========== RESET Y BASE ========== */
@@ -54,7 +56,7 @@ img {
 body {
   font-family: "Titillium Web", sans-serif;
   margin: 0;
-  color: var(--navy-medium);
+  color: var(--dark-blue);
 }
 
 a {
@@ -87,8 +89,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background: var(--navy-medium);
-  color: var(--white);
+  background: var(--blue-logo);
   text-align: center;
   padding-top: 5vh;
 }
@@ -125,8 +126,8 @@ a {
 /* ========== Seccion about us ========== */
 .about-section {
   height: 100%;
-  background: var(--gray-light);
-  color: var(--navy-deep);
+  background: var(--white);
+  color: var(--dark-blue);
 }
 
 .aboutUs {
@@ -146,12 +147,12 @@ a {
 
 .aboutUsLinea {
   height: 1px;
-  width: 100px;
-  background-color: #010f4c;
+  width: 5rem;
+  background-color: var(--dark-blue);
 }
 
 .aboutUsLinea:first-child {
-  width: 150px;
+  width: 10rem;
 }
 
 .aboutUs-foundersImage {
@@ -162,8 +163,8 @@ a {
 .aboutUs-foundersImage img {
   margin: 0 !important;
   width: calc(100% - 30px);
-  border-left: 15px solid #ffff;
-  border-right: 15px solid #ffff;
+  border-left: 15px solid var(--white);
+  border-right: 15px solid var(--white);
 }
 
 .aboutUs-foundersImage-top,
@@ -173,31 +174,33 @@ a {
   top: 0;
   width: 100%;
   height: 15px;
-  background: #010f4c;
+  background: var(--dark-blue);
 }
 
 .aboutUs-foundersImage-bottom {
   top: initial;
   bottom: 0;
-  background-color: #3b9fd8;
+  background-color: var(--electric-blue);
 }
 
 .aboutUs-foundersNames {
   background: var(--white);
   display: flex;
   justify-content: center;
-  gap: 30rem;
+  gap: clamp(10vw, 15vw, 15vw) !important;
   margin-bottom: 3rem;
   flex-wrap: wrap;
 }
 
 .aboutUs-foundersNames h3 {
-  font-size: clamp(3rem, 3vw, 1.5rem);
+  font-size: clamp(1.25rem, 3rem, 3rem);
   font-weight: 700;
   letter-spacing: 0.1em;
 }
 
 /* ========== Fin Seccion about us ========== */
+
+
 /* ========== Inicio Seccion info ========== */
 .info {
   padding-bottom: 5vh;
@@ -206,13 +209,13 @@ a {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding-left: 220px;
+  padding-left: 20rem;
 }
 
 .info-lista-item {
   display: flex;
   align-items: center;
-  font-size: 30px;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
   line-height: 1.5;
 }
 .info-lista-item span {
@@ -248,18 +251,11 @@ a {
 }
 
 /* ========== Fin Seccion info ========== */
+
 /* ========== Inicio Seccion Services ========== */
 .services-section {
-  min-height: 100vh;
+  min-height: 50vh;
   padding: 4rem 0 0;
-}
-.yacht-fullwidth {
-  width: 100%;
-}
-.yacht-fullwidth img {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 .services-bg-image {
   position: absolute;
@@ -268,7 +264,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.2;
+  opacity: 0.4;
   z-index: 0;
 }
 .services-lista {
@@ -288,7 +284,7 @@ a {
   list-style: none;
   gap: 5px;
 }
-.services-lista-items li {
+.services-lista-items {
   list-style: none;
   font-size: clamp(1.25rem, 3vw, 1.75rem);
   font-weight: 500;
@@ -307,9 +303,10 @@ a {
   padding-bottom: 0.5rem;
 }
 /* ========== Fin  Seccion Services ========== */
+
 /* ==========  Inicio contact sesion ========== */
 .contact-section {
-  height: 50vh;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -317,7 +314,7 @@ a {
   position: relative;
   overflow: hidden;
   padding: 4rem 2rem;
-  background: var(--navy-deep);
+  background: var(--blue-logo);
   color: var(--white);
 }
 
@@ -336,24 +333,25 @@ a {
 .contact-content {
   position: relative;
   z-index: 1;
-  top: 25px;
+  top: 70px;
   text-align: center;
 }
 
 .contact-website {
-  display: block;
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  display: flex;
+  font-size: clamp(0.25rem, 2rem, 2rem);
   font-weight: 300;
-  letter-spacing: 0.15em;
-  color: var(--gray-text);
-  margin-bottom: 4rem;
+  text-align: center;
+  letter-spacing: normal;
+  color: var(--white);
+  margin-bottom: 3rem;
 }
 
 .contact-links {
-  display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .contact-link {
@@ -386,13 +384,17 @@ a {
   text-align: center;
 }
 
-.contact-website {
-  margin-bottom: 3rem;
-  letter-spacing: 0.1em;
-}
-
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
+  .body {
+  overflow-x: hidden;
+  }
+  .aboutUsLinea:first-child{
+    width: 8rem;
+  }
+  .aboutUsLinea {
+    width: 4rem;
+  }
   .hero-section {
     justify-content: center;
     align-items: center;
@@ -410,30 +412,28 @@ a {
   .section-header .line {
     max-width: 3rem;
   }
-
   .section-header .line-long {
     max-width: 6rem;
   }
-
-  .founders-names {
-    gap: 1.5rem;
-  }
-
   .contact-website {
     margin-bottom: 3rem;
     letter-spacing: 0.1em;
   }
-
   .section-logo .logo-img {
     width: 100px;
     height: auto;
   }
-
   .logo-footer-img {
     width: 80px;
   }
-}
-@media (min-width: 640px) {
+  .info-lista {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+   .info-lista-item {
+    flex-wrap: wrap;
+    font-size: 18px;
+  }
   .contact-links {
     flex-direction: row;
     gap: 4rem;
