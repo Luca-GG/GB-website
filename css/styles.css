@@ -187,7 +187,7 @@ a {
   background: var(--white);
   display: flex;
   justify-content: center;
-  gap: clamp(10vw, 15vw, 15vw) !important;
+  gap: clamp(10vw, 10vw, 10vw) !important;
   margin-bottom: 3rem;
   flex-wrap: wrap;
 }
@@ -218,6 +218,24 @@ a {
   font-size: clamp(1.25rem, 3vw, 1.5rem);
   line-height: 1.5;
 }
+
+/* Alinea el número destacado en su propia columna y hace
+   que el resto del texto envuelva en la columna de contenido */
+.info-lista-item:first-child {
+  display: grid;
+  grid-template-columns: 30px auto 1fr;
+  gap: 0.5rem;
+  align-items: start;
+}
+.info-lista-item:first-child .info-lista-viñeta {
+  grid-column: 1;
+}
+.info-lista-item:first-child .info-lista-resaltado {
+  grid-column: 2;
+}
+.info-lista-item:first-child span:not(.info-lista-resaltado) {
+  grid-column: 3;
+}
 .info-lista-item span {
   align-self: flex-end;
   position: relative;
@@ -225,13 +243,12 @@ a {
 .info-lista-resaltado,
 .info-lista-ultimo-resaltado {
   color: var(--electric-blue);
-  font-size: 1.75em;
+  font-size: clamp(1.75rem, 3vw, 5rem);
   margin: 0 5px;
   line-height: 1;
 }
 .info-lista-resaltado {
   position: relative;
-  bottom: 3.5px;
 }
 .info-lista-ultimo-resaltado {
   font-size: 30px;
@@ -241,7 +258,6 @@ a {
   height: 3px;
   background: var(--electric-blue);
   margin-top: 4px;
-
   margin-right: 15px;
 }
 
@@ -348,7 +364,8 @@ a {
 }
 
 .contact-links {
-  flex-direction: column;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -359,7 +376,7 @@ a {
   align-items: center;
   gap: 0.75rem;
   color: var(--gray-text);
-  font-size: 0.9rem;
+  font-size: 1rem;
   letter-spacing: 0.05em;
   transition: color 0.3s;
 }
@@ -378,22 +395,25 @@ a {
 
 .copyright {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1rem;
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--gray-text);
   text-align: center;
 }
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .body {
-  overflow-x: hidden;
+    overflow-x: hidden;
+  }
+  .aboutUs {
+    padding-left: 25px;
   }
   .aboutUsLinea:first-child{
-    width: 8rem;
+    width: 3rem;
   }
   .aboutUsLinea {
-    width: 4rem;
+    width: 1rem;
   }
   .hero-section {
     justify-content: center;
@@ -415,6 +435,14 @@ a {
   .section-header .line-long {
     max-width: 6rem;
   }
+  .aboutUs-foundersNames {
+    gap: clamp(1vw, 6vw, 16vw);
+  }
+  .aboutUs-foundersNames h3 {
+    font-size: clamp(1rem, 1rem, 1rem);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
   .contact-website {
     margin-bottom: 3rem;
     letter-spacing: 0.1em;
@@ -426,17 +454,47 @@ a {
   .logo-footer-img {
     width: 80px;
   }
+  .info-lista-viñeta {
+    width: 15px;
+  }
+  .info-lista-resaltado,{
+    font-size: clamp(2rem, 3vw, 2rem);
+  }
+  .info-lista-ultimo-resaltado {
+  font-size: clamp(1rem, 1rem, 1rem);
+  }
   .info-lista {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-   .info-lista-item {
-    flex-wrap: wrap;
-    font-size: 18px;
+  /* Mobile: place number in its own column and make the
+     descriptive text occupy the right column so wrapped lines
+     start under the text (not under the number). */
+  .info-lista-item {
+    display: grid;
+    grid-template-columns: 30px min-content 1fr;
+    gap: 0.5rem;
+    align-items: start;
+    font-size: clamp(1rem, 1rem, 1rem);
+  }
+  .info-lista-viñeta {
+    grid-column: 1;
+    margin-top: 0.25rem;
+  }
+  .info-lista-resaltado {
+    grid-column: 2;
+    align-self: start;
+  }
+  .info-lista-item > span:not(.info-lista-resaltado) {
+    grid-column: 3;
+  }
+  .contact-website {
+    font-size: clamp(0.5rem, 1rem, 1rem);
   }
   .contact-links {
-    flex-direction: row;
-    gap: 4rem;
+    flex-direction: column;
+    font-size: clamp(0.5rem, 1rem, 1rem);
+    gap: 0.5rem;
   }
 }
 @media (max-width: 480px) {
