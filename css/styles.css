@@ -117,7 +117,7 @@ a {
 
 .aboutUs h2 {
   font-size: 30px;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   margin: 0;
 }
 
@@ -233,7 +233,7 @@ a {
   height: 3px;
   background: var(--electric-blue);
   margin-top: 4px;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 /* ========== Fin Seccion info ========== */
@@ -270,7 +270,7 @@ a {
 .services-lista-items {
   list-style: none;
   font-size: clamp(1.25rem, 3vw, 1.75rem);
-  font-weight: 500;
+  font-weight: 400;
 }
 .service-item-separador {
   margin: 0 auto;
@@ -281,7 +281,7 @@ a {
 .service-item {
   position: relative;
   font-size: clamp(1.25rem, 3vw, 1.75rem);
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
   padding-bottom: 0.5rem;
 }
@@ -323,7 +323,7 @@ a {
 .contact-website {
   display: flex;
   font-size: clamp(0.25rem, 2rem, 2rem);
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   letter-spacing: normal;
   color: var(--white);
@@ -428,7 +428,7 @@ a {
     font-size: 3vw !important;
   }
   .info-lista-viñeta {
-    width: 6vw !important;
+    width: 4vw !important;
   }
 
   .contact-website {
@@ -443,6 +443,19 @@ a {
   }
 }
 @media (max-width: 480px) {
+  
+  .info-lista-item:first-child > .info-lista-viñeta,
+  .info-lista-item:nth-child(2) > .info-lista-viñeta,
+  .info-lista-item:nth-child(4) > .info-lista-viñeta {
+  align-items: flex-start;
+  margin-top: 11px;
+  }
+
+  .info-lista-viñeta {
+    width: 3vw !important;
+    height: 2px !important;
+  }
+
   .stat-item {
     flex-direction: column;
     height: 4px;
