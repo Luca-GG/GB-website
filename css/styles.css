@@ -204,6 +204,7 @@ a {
 /* ========== Inicio Seccion info ========== */
 .info {
   padding-bottom: 5vh;
+  background-color: var(--white);
 }
 .info-lista {
   display: flex;
@@ -264,10 +265,6 @@ a {
 /* ========== Fin Seccion info ========== */
 
 /* ========== Inicio Seccion Services ========== */
-.services-section {
-  min-height: 50vh;
-  padding: 4rem 0 0;
-}
 .services-bg-image {
   position: absolute;
   top: 0;
