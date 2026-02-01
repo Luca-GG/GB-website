@@ -164,7 +164,6 @@ a {
   display: flex;
   justify-content: center;
   gap: clamp(10vw, 10vw, 10vw) !important;
-  margin-bottom: 3rem;
   flex-wrap: wrap;
 }
 
