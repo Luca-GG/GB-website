@@ -131,6 +131,7 @@ a {
 }
 
 .aboutUs {
+  background-color: var(--white);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -304,7 +305,7 @@ a {
   margin: 0 auto;
   width: 32px;
   height: 2px;
-  background: var(--sky-accent);
+  background: var(--electric-blue);
 }
 .service-item {
   position: relative;
