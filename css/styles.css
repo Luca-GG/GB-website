@@ -1,31 +1,6 @@
-/* =============================================
-  GADEA & BUSCH YACHT DESIGN - Estilos
-  =============================================
-
-  CÓMO CAMBIAR COLORES:
-  - --navy-deep: Azul marino principal del fondo oscuro (#030621)
-  - --sky-accent: Azul cielo para acentos y highlights
-
-  IMÁGENES A REEMPLAZAR:
-  - logoazul.png: Logo del hero
-  - founders.png: Imagen de fundadores
-  - logoblanco.png: Logo blanco en secciones claras
-  - yacht.png: Imagen del yacht (ancho completo)
-  - fondoservices.png: Fondo de la lista de servicios
-  - logofalopa.png: Logo del footer
-
-  =============================================
-*/
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 /* ========== VARIABLES DE COLOR ========== */
 :root {
-  --navy-deep: #030621;
-  --navy-medium: #010f4c;
-  --navy-light: #0049ff;
-
-  --sky-light: #6ba3d6;
-
-  --gray-light: #f8f8f8;
   --sky-accent: #3b9fd8;
   --white: #ffffff;
   --gray-text: #7a8fa8;
@@ -55,7 +30,7 @@ img {
 body {
   font-family: "Titillium Web", sans-serif;
   margin: 0;
-  background: var(--white);
+  background-color: var(--white);
   color: var(--dark-blue);
 }
 
