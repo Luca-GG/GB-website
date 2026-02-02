@@ -320,6 +320,7 @@ font-size: 2rem;
   z-index: 1;
   top: 70px;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .contact-website {
@@ -329,7 +330,7 @@ font-size: 2rem;
   text-align: center;
   letter-spacing: normal;
   color: var(--white);
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .contact-links {
@@ -337,25 +338,30 @@ font-size: 2rem;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .contact-link {
-  display: flex;
-  align-items: center;
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
   gap: 0.75rem;
   color: var(--gray-text);
   font-size: 1rem;
   letter-spacing: 0.05em;
   transition: color 0.3s;
+  margin-top: 1.5rem;
+}
+
+.contact-link svg {
+  align-self: flex-end;
+  transform-origin: center bottom;
+  transition: transform 0.3s;
 }
 
 .contact-link:hover {
   color: var(--sky-accent);
-}
-
-.contact-link svg {
-  transition: transform 0.3s;
 }
 
 .contact-link:hover svg {
@@ -451,9 +457,11 @@ font-size: 2rem;
     letter-spacing: 0.1em;
     font-size: clamp(1rem, 1.5rem, 2rem);
   }
-  .contact-link {
+  
+  .contact-links {
     flex-direction: column;
-    font-size: clamp(0.5rem, 1rem, 1rem);
+    align-items: center;
+    font-size: clamp(0.75rem, 0.75rem, 0.75rem);
     gap: 0.5rem;
   }
 }
@@ -485,17 +493,6 @@ font-size: 2rem;
     flex-direction: column;
     text-align: center;
     gap: 1rem;
-  }
-  .contact-website {
-    display: block;
-    margin-bottom: 3rem;
-    letter-spacing: 0.1em;
-    font-size: clamp(1rem, 1rem, 1rem);
-  }
-  .contact-link {
-    flex-direction: column;
-    font-size: clamp(0.75rem, 0.75rem, 0.75rem);
-    gap: 0.5rem;
   }
 }
 
