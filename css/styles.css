@@ -117,7 +117,7 @@ a {
 }
 
 .aboutUs h2 {
-font-size: 2rem;
+  font-size: 2rem;
   font-weight: 400;
   margin: 0;
 }
@@ -411,6 +411,10 @@ font-size: 2rem;
   .aboutUs {
     padding-left: 25px;
   }
+  
+  .aboutUs h2 {
+    font-size: 1.5rem;
+  }
   .aboutUsLinea:first-child {
     width: 3rem;
   }
@@ -455,7 +459,7 @@ font-size: 2rem;
     display: block;
     margin-bottom: 3rem;
     letter-spacing: 0.1em;
-    font-size: clamp(1rem, 1.5rem, 2rem);
+    font-size: clamp(1rem, 1rem, 2rem);
   }
   
   .contact-links {
@@ -463,6 +467,16 @@ font-size: 2rem;
     align-items: center;
     font-size: clamp(0.75rem, 0.75rem, 0.75rem);
     gap: 0.5rem;
+  }
+  
+  .contact-link {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+  }
+  
+  .contact-link svg {
+    transform: scale(0.8);
   }
 }
 @media (max-width: 480px) {
