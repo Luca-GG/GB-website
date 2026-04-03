@@ -84,7 +84,9 @@ a {
   bottom: 3rem;
   color: var(--gray-text);
   animation: bounce 2s infinite;
-  transition: color 0.3s;
+  transition: color 0.3s, opacity 1.5s ease;
+  opacity: calc(1 - var(--scrolled, 0));
+  pointer-events: calc((1 - var(--scrolled, 0)) * auto); /* no funciona en todos los browsers */
 }
 .scroll-indicator svg {
   width: 40px;
@@ -330,7 +332,6 @@ a {
 }
 
 .contact-mails {
-  display: flex;
   padding-bottom: 1rem;
   gap: 4rem;
 }
