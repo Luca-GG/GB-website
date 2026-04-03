@@ -180,7 +180,7 @@ a {
 
 /* ========== Section info ========== */
 .info {
-  padding-bottom: 5vh;
+  padding-bottom: 0vh;
   background-color: var(--white);
 }
 .info-lista {
